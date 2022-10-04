@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:listview_json_parse_demo/models/product.dart';
+
 import 'dart:convert';
+import 'package:listview_json_parse_demo/models/funeralparlor.dart';
 
 import 'package:listview_json_parse_demo/screens/product_detail_screen.dart';
 
@@ -16,26 +17,26 @@ class ProductListScreen extends StatefulWidget {
 
 class _ProductListScreenState extends State<ProductListScreen> {
   
-  List<Product> allProducts = [];
-  List<Product> filteredProducts = [];
+  List<FuneralParlor> allProducts = [];
+  List<FuneralParlor> filteredProducts = [];
 
   Future<void> readJsonFile() async {
 
-    final String response = await rootBundle.loadString('assets/products.json');
+    final String response = await rootBundle.loadString('assets/funeralplace.json'); //change file
     final productData = await json.decode(response);
 
-    var list = productData["items"] as List<dynamic>;
+    var list = productData["places"] as List<dynamic>;
 
     setState(() {
       allProducts = [];
-      allProducts = list.map((e) => Product.fromJson(e)).toList();
+      allProducts = list.map((e) => FuneralParlor.fromJson(e)).toList();
       filteredProducts = allProducts;
-    });
+    });  //initial state
 
   }
 
   void _runFilter(String searchKeyword) {
-    List<Product> results = [];
+    List<FuneralParlor> results = [];
 
     if(searchKeyword.isEmpty) {
       results = allProducts;
@@ -58,16 +59,14 @@ class _ProductListScreenState extends State<ProductListScreen> {
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
           resizeToAvoidBottomInset: true,
-          appBar: AppBar(title: Text("Products List"),),
+          appBar: AppBar(title: Text("Funeral Parlours"),),
           body:  Column(
               children: [
                 Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: ElevatedButton(onPressed: readJsonFile, child: Text("Load Products")),
+                  child: ElevatedButton(onPressed: readJsonFile, child: Text("Load Locations")),
                 ),
-          
-                // if (allProducts.length > 0) 
-          
+                // if (allProducts.length > 0)
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Column(
@@ -91,7 +90,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                         itemCount: filteredProducts.length,
                         itemBuilder: (BuildContext context, index) {
                           return Dismissible(
-                            key: ValueKey(filteredProducts[index].id.toString()),
+                            key: ValueKey(filteredProducts[index].id),
                             background: Container(
                               color: Colors.redAccent,
                               child: Icon(Icons.delete, color: Colors.white, size: 40),
@@ -128,7 +127,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                             },
                             child: Card(
                               margin: EdgeInsets.all(15.0),
-                              color: Colors.greenAccent,
+                              color: Colors.green,
                               child: ListTile(
                                 title: Padding(
                                   padding: const EdgeInsets.all(8.0),
@@ -136,7 +135,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                                 ),
                                 subtitle: Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: Text(filteredProducts[index].price.toString(), style: TextStyle(fontWeight: FontWeight.bold),),
+                                  child: Text(filteredProducts[index].rating.toString(), style: TextStyle(fontWeight: FontWeight.bold),),
                                 ),
                                 onTap: () {
                                   // print(jsonEncode(products[index]));

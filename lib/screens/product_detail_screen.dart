@@ -1,8 +1,9 @@
-
+import 'package:listview_json_parse_demo/models/funeralparlor.dart';
 import 'dart:convert';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 
 import 'package:flutter/material.dart';
-import 'package:listview_json_parse_demo/models/product.dart';
+
 
 class ProductDetailScreen extends StatefulWidget {
   const ProductDetailScreen({ Key? key }) : super(key: key);
@@ -16,7 +17,7 @@ class ProductDetailScreen extends StatefulWidget {
 class _ProductDetailScreenState extends State<ProductDetailScreen> {
   
   var productName = "";
-  Product? product;
+  FuneralParlor? product;
 
   @override
   void initState(){
@@ -35,8 +36,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
 
     setState(() {
       
-      product = Product.fromJson(productJson);
-      productName = product!.name;
+      product = FuneralParlor.fromJson(productJson);
 
     });
 
@@ -45,44 +45,156 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
 
   @override
   Widget build(BuildContext context) {
+
+    final ButtonStyle style =
+        ElevatedButton.styleFrom(textStyle: TextStyle(
+            fontFamily: 'Varela',
+            fontSize: 14.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.white
+        ));
+
     return Scaffold(
-      appBar: AppBar(title: Text(productName),),
-      body: Center(
-        child: Container(
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  SizedBox(height: 25,),
-                  Container(
-                    margin: EdgeInsets.all(5.0),
-                    child: Text("Name : " + (product!.name) ,
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25.0)),
-                  ),
-                  SizedBox(height: 25,),
-                  Container(
-                      margin: EdgeInsets.all(5.0),
-                      child: Text("Price : " + (product!.price.toString()),
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 25.0))
-                  ),
-                  SizedBox(height: 25,),
-                  Container(
-                      margin: EdgeInsets.all(5.0),
-                      child: Text("Status : " + (product!.inventoryStatus.toString()),
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 25.0))
-                  ),
-                ],
+      appBar: AppBar(title: Text(product!.name),),
+      body: ListView(
+          children: [
+            SizedBox(height: 15.0),
+            Padding(
+              padding: EdgeInsets.only(left: 20.0),
+
+            ),
+            SizedBox(height: 10.0),
+            Center(
+                child: Image.asset('assets/images/funeral_parlour.jpeg',
+                    height: 300.0,
+                    width: 500.0,
+                    fit: BoxFit.contain
+                )
+            ),
+            SizedBox(height: 10.0),
+            Center(
+              child: Text(product!.name,
+                  style: TextStyle(
+                      fontFamily: 'Varela',
+                      fontSize: 22.0,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFFF17532))),
+            ),
+            SizedBox(height: 10.0),
+            Center(
+              child: Text(product!.address,
+                  style: TextStyle(
+                      color: Color(0xFF575E67),
+                      fontFamily: 'Varela',
+                      fontSize: 16)),
+            ),
+            SizedBox(height: 20.0),
+            Center(
+              child: Container(
+                width: MediaQuery.of(context).size.width - 50.0,
+                child: Text(product!.description,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontFamily: 'Varela',
+                        fontSize: 16.0,
+                        color: Color(0xFFB4B8B9))
+                ),
               ),
-          ),
+            ),
+            SizedBox(height: 20.0),
+            Center(
+                child: InkWell(
+
+                    child:Container(
+                        width: MediaQuery.of(context).size.width - 50.0,
+                        height: 50.0,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(25.0),
+                            color: Color(0xFFF17532)
+                        ),
+                        child: Center(
+                            child: Text('Call ' + product!.phone,
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white
+                              ),
+                            )
+                        )
+                    ),
+                    onTap: () {
+                      _callNumber(product!.phone);
+                    }
+                )
+            ),
+            SizedBox(height: 20.0),
+            Center(
+                child: Container(
+                    width: MediaQuery.of(context).size.width - 50.0,
+                    height: 50.0,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25.0),
+                        color: Color(0xFFF17532)
+                    ),
+                    child: Center(
+                        child: Text('Add to plans',
+                          style: TextStyle(
+                              fontFamily: 'Varela',
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white
+                          ),
+                        )
+                    )
+                )
+            ),
+            SizedBox(height: 20.0),
+            Center(
+            child: Container(
+              width: MediaQuery.of(context).size.width - 50.0,
+              height: 50.0,
+              child: ElevatedButton(
+                style:style,
+                child: const Text('show in Maps'),
+                  onPressed: () {showModalBottomSheet<void>(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        height: 200,
+                        color: Colors.amber,
+                        child: Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              const Text('Modal BottomSheet'),
+                              ElevatedButton(
+                                child: const Text('Close BottomSheet'),
+                                onPressed: () => Navigator.pop(context),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  );}
+              ),
+
+            )
+            )
+          ]
       ),
+
+
+
     );
   }
+}
+
+
+
+_callNumber(String phoneNumber) async {
+  String number = phoneNumber;
+  await FlutterPhoneDirectCaller.callNumber(number);
 }

@@ -1,0 +1,212 @@
+{
+  "places": [
+    {
+      "id": 1,
+      "corlong": 103.874304200449998,
+      "corlat": 1.32034910001846,
+      "name": "Ang Chin Moh Funeral Directors Pte Ltd",
+      "address": "88 Geylang Bahru, #01-2724, Singapore 339696",
+      "rating": 5,
+      "description": "Ang Chin Moh Funeral Directors provides funeral services for Buddhists,Taoists,Christian,Catholics in Singapore",
+      "phone": "62263333"
+    },
+    {
+      "id": 2,
+      "corlong": 103.837907100322994,
+      "corlat": 1.36117749999608,
+      "name": "Ang Yew Seng Funeral Parlour",
+      "address": "Blk 38 Sin Ming Dr, #01-537, Singapore 575712",
+      "rating": 5,
+      "description": "Ang Yew Seng Funeral Parlour provides funeral services for Buddhists,Taoists,Christian,Catholics in Singapore",
+      "phone": "90901999"
+    },
+    {
+      "id": 3,
+      "corlong": 103.837893699912001,
+      "corlat": 1.36161329963547,
+      "name": "Casket Fairprice Pte Ltd",
+      "address": "Sin Ming Dr, #01-571 Blk 37, Singapore 575711",
+      "rating": 5,
+      "description": "Casket Fairprice is a reliable funeral services provider and undertaker in Singapore that has grown steadily since our establishment in 1993, to stand as one of Singapore’s leading funeral service groups",
+      "phone": "64559909"
+    },
+    {
+      "id": 4,
+      "corlong": 103.837907100322994,
+      "corlat": 1.36117749999608,
+      "name": "Century Products Company",
+      "address": "174 Sin Ming Dr, Singapore 575715",
+      "rating": 0,
+      "description": "",
+      "phone": "64577785"
+    },
+    {
+      "id": 5,
+      "corlong": 103.837893699912001,
+      "corlat": 1.36161329963547,
+      "name": "Chin Wah Heng Funeral Parlour ",
+      "address": "37 Sin Ming Dr, Singapore 575711",
+      "rating": 5,
+      "description": "",
+      "phone": "64591242"
+    },
+    {
+      "id": 6,
+      "corlong": 103.874056799900004,
+      "corlat": 1.32070970043141,
+      "name": "Chng Hoon Casket",
+      "address": "3018 Bedok North Street 5, Singapore 486132",
+      "rating": 3,
+      "description": "Chng Hoon Casket has professional and caring team is experienced in providing full, affordable funeral services with attention to detail and our commitment to you is to listen and guide you through all of the options available",
+      "phone": "91166689"
+    },
+    {
+      "id": 7,
+      "corlong": 103.861374300221996,
+      "corlat": 1.33576200015127,
+      "name": "Chye Seng Undertaker",
+      "address": "4 Toa Payoh Industrial Park, Singapore 319056",
+      "rating": 5,
+      "description": "CHYE SENG UNDERTAKER is an ACRA-registered entity that has been operating for 25 years 9 months in Singapore since its incorporation in 1996",
+      "phone": "62512833"
+    },
+    {
+      "id": 8,
+      "corlong": 103.874304200449998,
+      "corlat": 1.32034910001846,
+      "name": "Dignity Funeral Services",
+      "address": "88 Geylang Bahru, #01-2726, Singapore 339696",
+      "rating": 5,
+      "description": "Our Dignity Funeral Team pride ourselves in service excellence - with Sincerity, Kindness and Compassion as our Core Values. I personally believe in serving with a caring heart as we accompany you through the journey of honouring the lives of whom we love and respect",
+      "phone": "65552225"
+    },
+    {
+      "id": 9,
+      "corlong": 103.874304200449998,
+      "corlat": 1.32034910001846,
+      "name": "Direct Funeral Services Pte Ltd",
+      "address": "88 Geylang Bahru,#01-2726 Singapore 339696",
+      "rating": 5,
+      "description": "Our Dignity Funeral Team pride ourselves in service excellence - with Sincerity, Kindness and Compassion as our Core Values. I personally believe in serving with a caring heart as we accompany you through the journey of honouring the lives of whom we love and respect",
+      "phone": "65552225"
+    },
+    {
+      "id": 10,
+      "corlong": 103.861374300221996,
+      "corlat": 1.33576200015127,
+      "name": "Flying Home Pte Ltd",
+      "address": "#01-1345A, 4 Toa Payoh Industrial Park, 319056",
+      "rating": 5,
+      "description": "Our services cover travel arrangements for family members to the country where the death occurred, the facilitation of repatriation with the local authorities and funeral director, and transportation of the remains to Singapore. When the deceased is back in Singapore, we are able to assist in arranging a proper funeral wake/service and cremation/burial",
+      "phone": "62530001"
+    },
+    {
+      "id": 11,
+      "corlong": 103.861374300221996,
+      "corlat": 1.33576200015127,
+      "name": "Hosanna Bereavement Services Pte Ltd",
+      "address": "Block 4,#01-1333 ,Toa Payoh Industrial Park, 699815",
+      "rating": 5,
+      "description": "HBS ensures highest quality of services provided and reasonable fees set by all its sub-contractors. Hosanna will deal with sloppy services or over-charging complaints against its sub-contractors",
+      "phone": "63527797"
+    },
+    {"id": 12,
+      "corlong": 103.874056799900004,
+      "corlat": 1.32070970043141,
+      "name": "Jin Lu Funeral Service",
+      "address": "89 Geylang Bahru, Singapore 339697",
+      "rating": 0,
+      "description": "",
+      "phone": "98538582"
+    },
+    {"id": 13,
+      "corlong": 103.861374300221996,
+      "corlat": 1.33576200015127,
+      "name": "Lam Bee Hup Kee Casket",
+      "address": "704 Yishun Ave 5, Singapore 760704",
+      "rating": 0,
+      "description": "",
+      "phone": "62557694"
+    },
+    {
+      "id": 14,
+      "corlong": 103.837893699912001,
+      "corlat": 1.36161329963547,
+      "name": "Simplicity Casket Pte Ltd",
+      "address": " Blk 37 Sin Ming Drive #01-575 , Singapore 575711",
+      "rating": 4,
+      "description": "Singapore Funeral Services For All The Religions. Supporting Families During Their Times of Bereavement",
+      "phone": "64567423"
+    },
+    {
+      "id": 15,
+      "corlong": 103.837893699912001,
+      "corlat": 1.36161329963547,
+      "name": "Sin Ming Funeral Parlour",
+      "address": "37 Sin Ming Dr, #01-577, Singapore 575711",
+      "rating": 4,
+      "description": "",
+      "phone": "64568989"
+    },
+    {
+      "id": 16,
+      "corlong": 103.861308500400995,
+      "corlat": 1.31217280003175,
+      "name": "Singapore Casket Co Pte Ltd",
+      "address": " 131 Lavender St., Singapore 338737",
+      "rating": 4,
+      "description": "With an array of parlour halls and services that we offer, we are able to tailor an affordable and dignified funeral service for your loved ones, regardless any religion. During this difficult time,leave the planning to us. We provide you and your family personal, attentive service,so that you can attend to your loved ones and other important matter",
+      "phone": "62934388"
+    },
+    {
+      "id": 17,
+      "corlong": 103.929160099628007,
+      "corlat": 1.36762570025051,
+      "name": "Singapore Funeral Services",
+      "address": "Blk 4 Toa Payoh Industrial Park #01-1341, Singapore 319056",
+      "rating": 5,
+      "description": "Funerals are not just about saying goodbye, they are about commemorating each individual that has left behind a legacy. Our team at Singapore Funeral Services is dedicated to offering the best advice and guidance throughout each journey of grief and coping with a loss. Under our sincere support and caring hands, we assure the accordance of the funeral arrangement to your wishes.",
+      "phone": "18008008888"
+    },
+    {
+      "id": 18,
+      "corlong": 103.898217700374005,
+      "corlat": 1.37362589985426,
+      "name": "Saint Joseph Dying Aid Association",
+      "address": "100 Hougang Ave 8, Singapore 538790",
+      "rating": 4,
+      "description": "Singapore Funeral Services has been around since 1990, supporting families in times of sorrow and bereavement.",
+      "phone": "97800636"
+    },
+    {
+      "id": 19,
+      "corlong": 103.837893699912001,
+      "corlat": 1.36161329963547,
+      "name": "Teck Hin Undertaker",
+      "address": "12 Jalan Pinang, Singapore 199144",
+      "rating": 3,
+      "description": "Singapore Funeral Services has been around since 1990, supporting families in times of sorrow and bereavement.",
+      "phone": "97800636"
+    },
+    {
+      "id": 20,
+      "corlong": 103.837907100322994,
+      "corlat": 1.36117749999608,
+      "name": "Trinity Casket Pte Ltd",
+      "address": "38 Sin Ming Dr, #01-527/531, Singapore 575712",
+      "rating": 5,
+      "description": "Our funeral packages are excellent value and can be tailored to suit your needs and budget.",
+      "phone": "64514496"
+    },
+    {
+      "id": 21,
+      "corlong": 103.861374300221996,
+      "corlat": 1.33576200015127,
+      "name": "Union Casket Pte Ltd",
+      "address": "Blk 4 Toa Payoh #01-1329 Lorong 8, Toa Payoh Industrial Park, Singapore 319056",
+      "rating": 5,
+      "description": "Union Casket has worked to offer affordable funeral services and funeral parlours in Singapore while meeting the families needs and wishes",
+      "phone": "63538449"
+    }
+  ]
+}
