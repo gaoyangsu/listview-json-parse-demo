@@ -1,7 +1,7 @@
 import 'package:listview_json_parse_demo/models/funeralparlor.dart';
 import 'dart:convert';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
-
+import 'Personal_details_screen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -150,6 +150,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                 )
             ),
             SizedBox(height: 20.0),
+
             Center(
             child: Container(
               width: MediaQuery.of(context).size.width - 50.0,
@@ -179,10 +180,24 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                       );
                     },
                   );}
-              ),
+                ),
+              )
+            ),
+            SizedBox(height: 20.0),
 
-            )
-            )
+            Center(
+                child: Container(
+                  width: MediaQuery.of(context).size.width - 50.0,
+                  height: 50.0,
+                  child: ElevatedButton(
+                      style:style,
+                      child: const Text('Next-CheckDetails'),
+                      onPressed: () {
+                          Navigator.of(context).pushNamed(PersonalDetails.routeName, arguments: jsonEncode(product));
+                        },
+                      ),
+                  ),
+                )
           ]
       ),
 
